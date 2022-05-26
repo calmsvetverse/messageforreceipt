@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head></head>
+
+<body>
+    <script>
+
+
+
+
+        var Order = function(Customer,deliveryOrPickup,eta,Store,Price,receiptUploaded,whoToChargeExplanation,amountSpent,amountDue){
+        
+        this.Customer = Customer;
+        this.deliveryOrPickup = deliveryOrPickup;
+        this.eta = eta;
+        this.Store = Store;
+        this.Price = Price;
+        this.receiptUploaded = receiptUploaded;
+        this.whoToChargeExplanation = whoToChargeExplanation;
+        this.amountSpent = amountSpent;
+        this.amountDue = amountDue;  
+        
+        
+        Order.prototype.message = alert(
+        "Order for" + " " +  this.Customer + "." +" " + "It is a" + " " + this.deliveryOrPickup +"." + " "+ "It's ETA is:" + " " + this.eta +" "+ "from" + " " +
+        this.Store + "." + " " + "The price is" + " " + this.Price + "." + " " + 
+        "The receipt is" + " " + this.receiptUploaded + "." + " " + this.whoToChargeExplanation + 
+        " " + "is getting charged." + " " + this.amountSpent + " " + "is got spent." + " " + 
+        this.amountDue + " " + "is due." );
+        
+        
+        
+        
+        }
+        var Customer = prompt("Customer");
+        var deliveryOrPickup = prompt("Delivery or Pickup");
+        var eta = prompt("ETA");
+        var Store = prompt("Store");
+        var totalPrice = prompt("Total Price");
+        var receipt = prompt("Receipt uploaded?");
+        var charge = prompt("Who is getting charged and why");
+        var amountSpent = prompt("Amount spent now");
+        var amountDue = totalPrice - amountSpent;
+      
+
+
+        var anotherOrder = new Order(Customer,deliveryOrPickup,eta,Store,totalPrice,receipt,charge,amountSpent,amountDue);
+        
+        
+        alert(anotherOrder);
+        
+        
+        
+        
+        
+        </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
