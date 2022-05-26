@@ -2,6 +2,8 @@
 <head></head>
 
 <body>
+
+    <p id = "tester"></p>
     <script>
 
 
@@ -20,12 +22,12 @@
         this.amountDue = amountDue;  
         
         
-        Order.prototype.message = alert(
+        Order.prototype.message = document.getElementById('tester').innerHTML =
         "Order for" + " " +  this.Customer + "." +" " + "It is a" + " " + this.deliveryOrPickup +"." + " "+ "It's ETA is:" + " " + this.eta +" "+ "from" + " " +
         this.Store + "." + " " + "The price is" + " " + this.Price + "." + " " + 
         "The receipt is" + " " + this.receiptUploaded + "." + " " + this.whoToChargeExplanation + 
         " " + "is getting charged." + " " + this.amountSpent + " " + "is got spent." + " " + 
-        this.amountDue + " " + "is due." );
+        this.amountDue + " " + "is due." ;
         
         
         
@@ -46,13 +48,14 @@
         var anotherOrder = new Order(Customer,deliveryOrPickup,eta,Store,totalPrice,receipt,charge,amountSpent,amountDue);
         
         
-        alert(anotherOrder);
-        
+    
         
         
         
         
         </script>
+
+
 </body>
 
 
